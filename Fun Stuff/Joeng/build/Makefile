@@ -1,2 +1,2 @@
 default:
-	g++ ../src/main.cpp -o ../Joeng.exe -O2  -Wall -Wno-missing-braces -I ../include -L ../lib -lraylib -lopengl32 -lgdi32 -lwinmm -Wl,--subsystem,windows ../src/paddle.cpp ../src/ball.cpp -std=c++17
+	g++ ../src/main.cpp -o Joeng.exe -O2  -Wall -Wno-missing-braces -I ../include -L ../lib -lraylib -lopengl32 -lgdi32 -lwinmm -Wl,--subsystem,windows ../src/paddle.cpp ../src/ball.cpp -std=c++17

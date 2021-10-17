@@ -20,7 +20,7 @@ class Ball {
     void setSpeed(Vector2);
     float getRadius();
     void moveBall(int);
-    int checkCollision(Rectangle, Rectangle, int, int);
+    int checkCollision(Rectangle, Rectangle, int, int, Sound&, Sound&);
 
     private:
     float radius_ = 5.0;

@@ -19,6 +19,10 @@ int main () {
     InitWindow(window_width, window_height, "Joeng");
     SetTargetFPS(60);
 
+    InitAudioDevice();
+    Sound joe_sound = LoadSound("../sounds/Joe_Sound.wav");
+    Sound death = LoadSound("../sounds/death.wav");
+
     Ball ball(window_width, window_height);
     Paddle player_1(1, window_width, window_height);
     Paddle player_2(2, window_width, window_height);
@@ -43,7 +47,7 @@ int main () {
                 }
 
         ball.moveBall(ball_speed);
-        winner = ball.checkCollision(player_1.getPaddle(), player_2.getPaddle(), window_width, window_height);
+        winner = ball.checkCollision(player_1.getPaddle(), player_2.getPaddle(), window_width, window_height, joe_sound, death);
 
         if (player_2.getPaddle().y >= 0 && IsKeyDown(KeyboardKey::KEY_UP)) {
             player_2.movePaddle(KeyboardKey::KEY_UP);
@@ -86,6 +90,11 @@ int main () {
             }
         }
     }
+
+    UnloadSound(death);
+    UnloadSound(joe_sound);
+
+    CloseAudioDevice();
     
 
     CloseWindow();
