@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<title>CPSC332 Database Project</title>
+	</head>
+    <body>
+		<div class = "page_grid">
+			<div class = "form_group">
+				<h1>For Professors</h1>
+				<form action = "PHP Scripts/professor_ssn.php" method = "post">
+					Social Security Number: <input type = "text" name = "SSN">
+					<input type="submit">
+				</form>
+				<br>
+				<form action = "PHP Scripts/grades.php" method = "post">
+					Course Number: <input type = "text" name = "course">
+					Section Number: <input type = "text" name = "section">
+					<input type="submit">
+				</form>
+			</div>
+			<div class = "form_group">
+				<h1>For Students</h1>
+				<form action = "PHP Scripts/class_info.php" method = "post">
+					Course Number: <input type = "text" name = "course">
+					<input type="submit">
+				</form>
+				<br>
+				<form action = "PHP Scripts/cwid.php" method = "post">
+					CWID: <input type = "text" name = "CWID">
+					<input type="submit">
+				</form>
+			</div>
+		</div>
+    </body>
+</html>
