@@ -1,4 +1,3 @@
-// TODO: Include any headers you need.
 #include <string>
 #include <vector>
 #include "brush.h"
@@ -16,7 +15,6 @@
 class PaintProgram : public graphics::MouseEventListener,
                      public ButtonListener {
  public:
-  // TODO: Add your constructor, destructor, and member functions.
 
   PaintProgram() : PaintProgram(500, 500) {}
   PaintProgram(int height, int width) { image_.Initialize(height, width); }
@@ -42,8 +40,6 @@ class PaintProgram : public graphics::MouseEventListener,
   ToolType tool_;
   Eraser eraser_;
   std::vector<std::unique_ptr<Button>> buttons_;
-
-  // TODO: Add other data members here.
 };
 
 #endif  // PAINT_PROGRAM_H

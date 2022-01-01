@@ -1,6 +1,5 @@
 #include "path_tool.h"
 
-// Your code here to implement methods defined in path_tool.h.
 void PathTool::Start(int x, int y, graphics::Image& image) {
   x_ = x;
   y_ = y;

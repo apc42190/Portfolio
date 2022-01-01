@@ -1,10 +1,7 @@
-// TODO: Do not forget to include paint_program.h.
 #include "paint_program.h"
 #include <iostream>
 #include "color_button.h"
 #include "tool_button.h"
-// TODO: Define the methods from the PaintProgram class.
-// You do not need to provide a definition for GetImageForTesting.
 void PaintProgram::Initialize() {
   brush_.SetWidth(20);
   eraser_.SetWidth(20);
@@ -35,16 +32,20 @@ void PaintProgram::Initialize() {
     buttons_.at(i)->Draw(image_);
   }
 }
+
 void PaintProgram::Start() { image_.ShowUntilClosed("MFPaint"); }
+
 void PaintProgram::SetActiveTool(ToolType tool, Button* tool_button) {
   tool_ = tool;
 }
+
 void PaintProgram::SetActiveColor(const graphics::Color& color,
                                   Button* color_button) {
   brush_.SetColor(color);
   bucket_.SetColor(color);
   pencil_.SetColor(color);
 }
+
 void PaintProgram::OnMouseEvent(const graphics::MouseEvent& event) {
   std::cout << "Mouse event at " << event.GetX() << ", " << event.GetY()
             << std::endl;
@@ -85,6 +86,7 @@ void PaintProgram::OnMouseEvent(const graphics::MouseEvent& event) {
   }
   image_.Flush();
 }
+
 void PaintProgram::SaveAfterClosing(std::string name) {
   image_.SaveImageBmp(name);
 }

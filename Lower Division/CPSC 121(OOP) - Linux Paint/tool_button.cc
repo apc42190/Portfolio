@@ -1,6 +1,5 @@
 #include "tool_button.h"
 
-// TODO: Implement your ToolButton class methods here.
 ToolType ToolButton::GetToolType() const { return type_; }
 void ToolButton::Draw(graphics::Image& image) {
   Button::Draw(image);
@@ -17,6 +16,7 @@ void ToolButton::Draw(graphics::Image& image) {
                    graphics::Color(255, 255, 255));
   }
 }
+
 void ToolButton::DoAction() {
   ButtonListener* listener_ptr = GetButtonListener();
   listener_ptr->SetActiveTool(type_, this);

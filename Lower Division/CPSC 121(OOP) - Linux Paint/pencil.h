@@ -6,7 +6,6 @@
 #define PENCIL_H
 
 class Pencil : public ColorTool, public PathTool {
-  // Your code here to define the methods in pencil.h
  public:
   void Start(int, int, graphics::Image&) override;
   void MoveTo(int, int, graphics::Image&) override;

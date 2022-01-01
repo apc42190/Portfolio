@@ -3,7 +3,6 @@
 #ifndef BUTTON_H
 #define BUTTON_H
 
-// TODO: Define your abstract Button class here.
 class Button {
  public:
   Button(int x, int y, int width, int height, ButtonListener* listener_ptr)

@@ -4,7 +4,6 @@
 
 // Point is a class for use with IterativeFill.
 class Point {
-  // Your code here to create a helper class, Point, for use in your queue.
  public:
   void SetX(int x) { x_ = x; };
   void SetY(int y) { y_ = y; };
@@ -16,11 +15,11 @@ class Point {
   int y_;
 };
 
-// Your code here to implement the functions in bucket.h
 void Bucket::Fill(int x, int y, graphics::Image& image) {
   graphics::Color start = image.GetColor(x, y);
   IterativeFill(x, y, start, ColorTool::GetColor(), image);
 };
+
 void Bucket::RecursiveFill(int x, int y, graphics::Color start,
                            graphics::Color fill, graphics::Image& image) {
   if (x < 0 || y < 0 || x >= image.GetWidth() || y >= image.GetHeight()) {
@@ -37,6 +36,7 @@ void Bucket::RecursiveFill(int x, int y, graphics::Color start,
     RecursiveFill(x - 1, y, start, fill, image);
   }
 };
+
 void Bucket::IterativeFill(int x, int y, graphics::Color start,
                            graphics::Color fill, graphics::Image& image) {
   std::queue<Point> points_to_check;

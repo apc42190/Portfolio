@@ -1,13 +1,17 @@
 #include "button.h"
 
-// TODO: Implement the methods in the Button class which are not pure virtual.
 int Button::GetX() const { return x_; }
+
 int Button::GetY() const { return y_; }
+
 int Button::GetWidth() const { return width_; }
+
 int Button::GetHeight() const { return height_; }
+
 void Button::Draw(graphics::Image& image) {
   image.DrawRectangle(x_, y_, width_, height_, 30, 30, 30);
 }
+
 bool Button::DidHandleEvent(const graphics::MouseEvent& event) {
   if (event.GetX() >= x_ && event.GetX() < x_ + width_ && event.GetY() >= y_ &&
       event.GetY() < y_ + height_ &&
@@ -29,4 +33,5 @@ bool Button::DidHandleEvent(const graphics::MouseEvent& event) {
     return false;
   }
 }
+
 ButtonListener* Button::GetButtonListener() { return listener_ptr_; }

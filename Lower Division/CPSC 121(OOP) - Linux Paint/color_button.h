@@ -3,7 +3,6 @@
 #ifndef COLOR_BUTTON_H
 #define COLOR_BUTTON_H
 
-// TODO: Define your ColorButton class here.
 class ColorButton : public Button {
  public:
   ColorButton(int x, int y, int width, int height, ButtonListener* listener_ptr,

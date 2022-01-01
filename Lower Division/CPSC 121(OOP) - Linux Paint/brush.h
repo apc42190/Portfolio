@@ -6,7 +6,6 @@
 #define BRUSH_H
 
 class Brush : public ColorTool, public PathTool {
-  // Your code here to define the methods in brush.
  public:
   virtual graphics::Color GetColor() const override;
   void Start(int, int, graphics::Image&) override;

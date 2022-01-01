@@ -4,7 +4,6 @@
 #define PATH_TOOL_H
 
 class PathTool {
-  // Your code here to define the methods in path_tool.h
  public:
   virtual void Start(int, int, graphics::Image&);
   virtual void MoveTo(int, int, graphics::Image&);

@@ -5,7 +5,6 @@
 #define ERASER_H
 
 class Eraser : public Brush {
-  // Your code here
  public:
   Eraser() : Brush() {}
   graphics::Color GetColor() const override;
