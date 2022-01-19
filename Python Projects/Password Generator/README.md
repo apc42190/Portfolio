@@ -1,2 +1,2 @@
-##Password Generator in Python(Kivy)
+# Password Generator in Python(Kivy)
 I made this little app for the purpose of learning Kivy, a Python library for making graphical user interfaces. The app simpy ask how long the password should be and what elements are required(symbols, number, uppercase) and generates a random password that fulfills those requirements. An android build of the program can be found in this repo(generatorapp.apk).
