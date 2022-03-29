@@ -1,3 +1,10 @@
+//Author: Aaron Cope
+//Build Info: compile using following command: g++ Sorting_2_Good_Edition.cpp -lpthread
+//Run Info: run using ./a.out arg1 arg2 arg3
+/*Arguments: arg1: 'n' - number of integers to generate and sort.
+             arg2: 'u' - upper bound for random numbers
+             arg3: 'p' - number of segments to divide numbers into for sorting */
+
 #include <iostream>
 #include <vector>
 #include <cstdlib>
